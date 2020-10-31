@@ -29,7 +29,6 @@ jobs:
         run: |
           echo List variables
           echo New tag: ${{ steps.get-version.outputs.VERSION }}
-          echo GITHUB_ACTOR: ${{GITHUB_ACTOR}}
           echo --------
           echo Test gh CLI
           gh status
