@@ -31,4 +31,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           echo New tag: $${GITHUB_REF/refs\/tags\//}
-          echo ##### END #####/
+          echo --------
+        with:
+            github-token: ${{ secrets.GITHUB_TOKEN }}
+            tag-name: ${{ steps.get-version.outputs.VERSION }}
