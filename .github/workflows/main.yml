@@ -32,7 +32,7 @@ jobs:
           echo List variables
           echo New tag: ${{ steps.get-version.outputs.VERSION }}
           echo GITHUB_ACTOR: $GITHUB_ACTOR
-          export TOKEN = "####"$GITHUB_TOKEN"###"
+          export TOKEN="####"$GITHUB_TOKEN"###"
           echo TOKEN: $TOKEN
           echo --------
           echo gh login
