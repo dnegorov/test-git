@@ -31,7 +31,7 @@ jobs:
 
       - name: Run a multi-line script
         run: |
-          export GITHUB_TOKEN=${{ steps.get-token..outputs.TOKEN }}
+          export GITHUB_TOKEN=${{ steps.get-token.outputs.TOKEN }}
           echo List variables
           echo New tag: ${{ steps.get-version.outputs.VERSION }}
           echo TOKEN: $GITHUB_TOKEN
