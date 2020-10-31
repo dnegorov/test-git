@@ -30,4 +30,6 @@ jobs:
           echo List variables
           echo New tag: ${{ steps.get-version.outputs.VERSION }}
           echo --------
+          echo Test gh CLI
+          gh --help
 
