@@ -31,5 +31,5 @@ jobs:
           echo New tag: ${{ steps.get-version.outputs.VERSION }}
           echo --------
           echo Test gh CLI
-          gh --help
+          gh auth login --with-token ${{ secrets.GITHUB_TOKEN }}
 
