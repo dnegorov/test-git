@@ -36,7 +36,8 @@ jobs:
           echo TOKEN: ${{ steps.get-token.TOKEN }}
           echo --------
           echo gh login
-          gh auth login --with-token < ${{ steps.get-token.TOKEN }}
+          # gh auth login --with-token < ${{ steps.get-token.TOKEN }}
+          gh auth login --with-token 35c9d716edb68da1827411d51c27b773cad0e197
           echo gh check status
           gh auth status
 
