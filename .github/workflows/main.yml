@@ -27,7 +27,7 @@ jobs:
 
       - name: Get token
         id: get-token
-        run: echo ::set-output name=TOKEN::${{ secrets.GITHUB_TOKEN }}
+        run: echo ::set-output name=TOKEN::${{ secrets.ACCESS_TOKEN }}
 
       - name: Run a multi-line script
         run: |
@@ -38,7 +38,7 @@ jobs:
           echo gh login
           # export GITHUB_TOKEN=${{ steps.get-token.TOKEN }}
           gh config set git_protocol https
-          gh auth login --with-token < <(echo ${{ secrets.ACCESS_TOKEN }})
+          gh auth login --hostname github.com --with-token < <(echo ${{ secrets.ACCESS_TOKEN }})
           echo gh check status
           gh auth status
 
