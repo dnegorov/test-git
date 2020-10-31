@@ -27,7 +27,7 @@ jobs:
 
       - name: Run a multi-line script
         env:
-          GITHUB_TOKEN: ${{ secrets.test_git_token }}
+          GITHUB_TOKEN: 121212121212
         run: |
           echo List variables
           echo New tag: ${{ steps.get-version.outputs.VERSION }}
