@@ -32,4 +32,5 @@ jobs:
           echo --------
           echo Test gh CLI
           gh auth login --with-token ${{ secrets.GITHUB_TOKEN }}
+          
 
