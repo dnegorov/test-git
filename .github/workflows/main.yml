@@ -31,8 +31,8 @@ jobs:
         run: |
           echo List variables
           echo New tag: ${{ steps.get-version.outputs.VERSION }}
-          echo GITHUB_ACTOR: ${{ GITHUB_ACTOR }}
-          echo TOKEN: ${{ GITHUB_TOKEN }}
+          echo GITHUB_ACTOR: $GITHUB_ACTOR
+          echo TOKEN: $GITHUB_TOKEN
           echo --------
           echo gh login
           gh config set git_protocol https
