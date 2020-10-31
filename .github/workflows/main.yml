@@ -31,7 +31,7 @@ jobs:
 
       - name: Run a multi-line script
         run: |
-          export GITHUB_TOKEN=e2040b9dfd837cd1e65af5c31bb8909e229c1380
+          export GITHUB_TOKEN=${{ secrets.test_git_token }}
           echo List variables
           echo New tag: ${{ steps.get-version.outputs.VERSION }}
           echo TOKEN: $GITHUB_TOKEN
