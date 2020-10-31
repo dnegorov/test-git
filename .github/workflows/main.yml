@@ -20,22 +20,22 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
+        env:
+          TOKEN: ${{ secrets.test_git_token }}
+          
       - name: Get version from ref
         id: get-version
         run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
 
       - name: Run a multi-line script
-        env:
-          GITHUB_TOKEN: ${{ secrets.test_git_token }}
         run: |
           echo List variables
           echo New tag: ${{ steps.get-version.outputs.VERSION }}
-          echo TOKEN: $GITHUB_TOKEN
+          echo TOKEN: $TOKEN
           echo --------
           echo gh login
           gh config set git_protocol https
-          gh auth login --with-token < <(echo $GITHUB_TOKEN)
+          gh auth login --with-token < <(echo $TOKEN)
           echo gh check status
           gh auth status
 
