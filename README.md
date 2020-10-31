@@ -4,4 +4,4 @@
 
 Hello World!
 
-New version! v0.0.58
+New version! v0.0.59

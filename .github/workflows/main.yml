@@ -18,7 +18,7 @@ jobs:
 
     env:
       GITHUB_TOKEN: ${{ secrets.test_git_token }}
-      
+
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -37,9 +37,10 @@ jobs:
           echo TOKEN: $TOKEN
           echo --------
           echo gh login
+          echo $GITHUB_TOKEN > text.txt
           gh config set git_protocol https
           # gh auth login --with-token < <(echo "$GITHUB_TOKEN")
           echo gh check status
-          gh auth status
+          # gh auth status
 
 
