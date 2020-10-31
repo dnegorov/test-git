@@ -36,10 +36,9 @@ jobs:
           echo TOKEN: ${{ steps.get-token.TOKEN }}
           echo --------
           echo gh login
-          export GITHUB_TOKEN=${{ steps.get-token.TOKEN }}
+          # export GITHUB_TOKEN=${{ steps.get-token.TOKEN }}
           gh config set git_protocol https
-          # gh auth login --with-token < ${{ steps.get-token.TOKEN }}
-          gh auth login --hostname github.com
+          gh auth login --with-token < <(echo ${{ secrets.GITHUB_TOKEN }})
           echo gh check status
           gh auth status
 
