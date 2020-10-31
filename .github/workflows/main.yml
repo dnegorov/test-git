@@ -27,16 +27,16 @@ jobs:
 
       - name: Run a multi-line script
         env:
-          TOKEN: ${{ secrets.test_git_token }}
+          GITHUB_TOKEN: ${{ secrets.test_git_token }}
         run: |
           echo List variables
           echo New tag: ${{ steps.get-version.outputs.VERSION }}
-          echo GITHUB_ACTOR: $GITHUB_ACTOR
-          echo TOKEN: $TOKEN
+          echo GITHUB_ACTOR: ${{ GITHUB_ACTOR }}
+          echo TOKEN: ${{ GITHUB_TOKEN }}
           echo --------
           echo gh login
           gh config set git_protocol https
-          gh auth login --with-token < <(echo $TOKEN)
+          gh auth login --with-token < <(echo $GITHUB_TOKEN)
           echo gh check status
           gh auth status
 
