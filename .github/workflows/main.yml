@@ -17,8 +17,8 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      GITHUB_TOKEN1: ${{ secrets.test_git_token }}
-      GITHUB_TOKEN: "1234567890-1234567890=1234567890+"
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GITHUB_TOKEN1: "1234567890-1234567890=1234567890+"
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
