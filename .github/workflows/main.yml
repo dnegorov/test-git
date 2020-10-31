@@ -25,13 +25,18 @@ jobs:
         id: get-version
         run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
 
+      - name: Get token
+        id: get-token
+        run: echo ::set-output name=TOKEN::${{ secrets.GITHUB_TOKEN }}
+
       - name: Run a multi-line script
         run: |
           echo List variables
           echo New tag: ${{ steps.get-version.outputs.VERSION }}
+          echo TOKEN: ${{ steps.get-token.TOKEN }}
           echo --------
           echo gh login
-          gh auth login --with-token < ${ secrets.GITHUB_TOKEN }
+          gh auth login --with-token < ${{ steps.get-token.TOKEN }}
           echo gh check status
           gh auth status
 
