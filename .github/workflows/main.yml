@@ -32,4 +32,4 @@ jobs:
           echo test, and deploy your project.
           echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
           echo New tag: ${{ steps.get-version.outputs.VERSION }}
-          echo ##### END #####
+          echo ##### END #####/
