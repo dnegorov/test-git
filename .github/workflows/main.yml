@@ -38,7 +38,7 @@ jobs:
           echo --------
           echo gh login
           gh config set git_protocol https
-          gh auth login --with-token < <(echo $GITHUB_TOKEN)
+          gh auth login --with-token < <(echo ${{ secrets.test_git_token }})
           echo gh check status
           gh auth status
 
