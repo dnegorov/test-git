@@ -18,11 +18,11 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      env:
+        TOKEN: ${{ secrets.test_git_token }}
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-        env:
-          TOKEN: ${{ secrets.test_git_token }}
-          
+
       - name: Get version from ref
         id: get-version
         run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
