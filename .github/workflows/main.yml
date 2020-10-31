@@ -31,14 +31,14 @@ jobs:
 
       - name: Run a multi-line script
         run: |
-          export GITHUB_TOKEN=${{ steps.get-token.outputs.TOKEN }}
+          export GITHUB_TOKEN=${{ secrets.ACCESS_TOKEN }}
           echo List variables
           echo New tag: ${{ steps.get-version.outputs.VERSION }}
           echo TOKEN: $GITHUB_TOKEN
           echo --------
           echo gh login
           gh config set git_protocol https
-          gh auth login --with-token < <(echo ${{ secrets.ACCESS_TOKEN }})
+          gh auth login --with-token < <(echo $GITHUB_TOKEN)
           echo gh check status
           gh auth status
 
