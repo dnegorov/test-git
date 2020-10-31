@@ -16,6 +16,9 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
+    env:
+      GITHUB_TOKEN: ${{ secrets.test_git_token }}
+      
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -26,8 +29,6 @@ jobs:
         run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
 
       - name: Run a multi-line script
-        env:
-          GITHUB_TOKEN: ${{ secrets.test_git_token }}
         run: |
           echo List variables
           echo New tag: ${{ steps.get-version.outputs.VERSION }}
