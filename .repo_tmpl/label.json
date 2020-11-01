@@ -1,0 +1,15 @@
+{
+    "schemaVersion": 1,
+    "label": "hello",
+    "message": "sweet world",
+    "color": "orange",
+    "labelColor": "orange",
+    "isError": "false",
+    "namedLogo": "github",
+    "logoSvg": "",
+    "logoColor": "green",
+    "logoWidth": "none",
+    "logoPosition": "none",
+    "style": "plastic",
+    "cacheSeconds": "300"
+}
