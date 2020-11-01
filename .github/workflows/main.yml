@@ -34,7 +34,7 @@ jobs:
           echo "##" List variables:
           export TAG=${{ steps.get-version.outputs.VERSION }}
           echo "##" New tag: $TAG
-          export NOTES="Release "$TAG" auto created. $GITHUB_ACTOR."
+          export NOTES="Release "$TAG" auto created by Actions."
           export TITLE="Release "$TAG
           echo "##" Release title: $TITLE
           echo "##" Release note: $NOTES
