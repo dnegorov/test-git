@@ -9,10 +9,6 @@ on:
     tags:
       - 'v*.*.*'
 
-env:
-  GITHUB_TOKEN: ${{ secrets.test_git_key }}
-  GITHUB_TOKEN1: "1234567890-1234567890=1234567890+"
-
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -30,6 +26,9 @@ jobs:
         run: echo ::set-output name=VERSION::${GITHUB_REF/refs\/tags\//}
 
       - name: Run a multi-line script
+        env:
+          GITHUB_TOKEN: ${{ secrets.test_git_key }}
+          GITHUB_TOKEN1: "1234567890-1234567890=1234567890+"
         run: |
           echo "##" List variables:
           export TAG=${{ steps.get-version.outputs.VERSION }}
