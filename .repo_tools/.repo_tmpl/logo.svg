@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <text style="fill: rgb(51, 51, 51); font-family: &quot;Roboto Slab&quot;; font-size: 28px; white-space: pre;"
+    x="139.01" y="175.93" dx="-22.59" dy="64.73"
+    transform="matrix(14.52573, 0, 0, 10.04578, -1628.33147, -2168.78522)">D</text>
+  <text x="427.45" y="227.92"
+    style="white-space: pre; fill: rgb(51, 51, 51); font-family: &quot;Roboto Slab&quot;; font-size: 28px;"
+    transform="matrix(12.30812, 0, 0, 9.73846, -5196.85025, -1793.55975)">N</text>
+  <text x="376.19" y="249.2"
+    style="white-space: pre; fill: rgb(51, 51, 51); font-family: &quot;Roboto Slab&quot;; font-size: 28px;"
+    transform="matrix(12.35643, 0, 0, 9.75068, -4420.37855, -2003.79181)">E</text>
+</svg>

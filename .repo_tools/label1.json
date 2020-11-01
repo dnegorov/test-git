@@ -1,12 +1,12 @@
 {
     "schemaVersion": 1,
-    "label": "hello",
-    "message": "sweet world",
+    "label": "Label1",
+    "message": "Link",
     "color": "orange",
     "labelColor": "orange",
     "isError": "false",
     "namedLogo": "github",
     "logoColor": "green",
-    "style": "plastic",
+    "style": "flat",
     "cacheSeconds": "300"
 }
