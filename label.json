@@ -4,5 +4,6 @@
     "message": "sweet world",
     "color": "orange",
     "labelColor": "orange",
-    "logo": "github"
+    "namedLogo": "github",
+    "style": "plastic"
 }
