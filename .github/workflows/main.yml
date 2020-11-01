@@ -47,6 +47,6 @@ jobs:
           echo "##" gh check status
           gh auth status
           echo "##" create release
-          gh release create $TAG --notes '$NOTES' --title '$TITLE'
+          gh release create $TAG --notes $NOTES --title $TITLE
 
 
