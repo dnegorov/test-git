@@ -12,7 +12,7 @@ on:
 
 jobs:
 
-  New release:
+  New_Release:
     runs-on: ubuntu-latest
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
