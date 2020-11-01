@@ -36,13 +36,13 @@ jobs:
           export NOTES="Release "$TAG" auto created by Actions."
           export TITLE="Release "$TAG
           echo "##" Release title: $TITLE
-          echo "##" Release note: $NOTES
-          echo "##" GITHUB_ACTOR: $GITHUB_ACTOR
+          echo "##" Release note:  $NOTES
+          echo "##" GITHUB_ACTOR:  $GITHUB_ACTOR
           echo --------
           echo $GITHUB_CONTEXT
           echo --------
+          echo "##" gh config
           gh config set git_protocol https
-          # gh auth login --with-token < <(echo "$GITHUB_TOKEN")
           echo "##" gh check status
           gh auth status
           echo "##" create release
