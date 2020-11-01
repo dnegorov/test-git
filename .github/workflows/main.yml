@@ -26,14 +26,14 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.test_git_key }}
         run: |
-          echo -- List variables:
+          echo "-- List variables:"
           export TAG=${{ steps.get-version.outputs.VERSION }}
-          echo -- New tag:       $TAG
+          echo "-- New tag:       "$TAG
           export NOTES="Release "$TAG" auto created by Actions."
           export TITLE="Release "$TAG
-          echo -- Release title: $TITLE
-          echo -- Release note:  $NOTES
-          echo -- GITHUB_ACTOR:  $GITHUB_ACTOR
+          echo "-- Release title: "$TITLE
+          echo "-- Release note:  "$NOTES
+          echo "-- GITHUB_ACTOR:  "$GITHUB_ACTOR
           echo --------
           gh config set git_protocol https
           echo -- gh check status
